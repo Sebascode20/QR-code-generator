@@ -17,31 +17,69 @@
   </head>
   <body>
     <main>
-      <picture>
-        <source media="(min-width: 768px)" srcset="./resources/Logo.svg" />
-        <source srcset="./resources/Logo-small.svg" type="image/svg+xml" />
-        <img
-          src="./resources/Logo-small.svg"
-          width="114"
-          height="24"
-          alt="logo"
-        />
-      </picture>
-      <div class="input-btn">
-        <input type="text" name="url" id="url" placeholder="Enter an url" required />
-        <button type="submit">QR code</button>
-      </div>
+      <!-- URL SECTION -->
+      <section class="url-section">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./resources/Logo.svg" />
+          <source srcset="./resources/Logo-small.svg" type="image/svg+xml" />
+          <img
+            src="./resources/Logo-small.svg"
+            width="114"
+            height="24"
+            alt="logo"
+          />
+        </picture>
+        <form class="form-qr">
+          <input
+            type="text"
+            name="url"
+            id="url"
+            placeholder="Enter an url"
+            required
+          />
+          <button type="submit">QR code</button>
+        </form>
+      </section>
+      <!-- CODE QR SECTION -->
+      <section class="hidden-section qr-section">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./resources/Logo.svg" />
+          <source srcset="./resources/Logo-small.svg" type="image/svg+xml" />
+          <img
+            src="./resources/Logo-small.svg"
+            width="114"
+            height="24"
+            alt="logo"
+          />
+        </picture>
+        <div id="qrcode"></div>
+        <div class="links">
+          <div class="btn download">
+            <a href="#" download>Download</a>
+            <img
+              src="./resources/Load_circle_duotone.svg"
+              width="24"
+              height="24"
+              alt="download"
+            />
+          </div>
+          <div class="btn share">
+            <a href="#">Share</a>
+            <img
+              src="./resources/link_alt.svg"
+              width="24"
+              height="24"
+              alt="share"
+            />
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- 
-  Download
-  
-  Share
-  
-  -->
     <footer class="author-info">
       Coded by
       <a
         href="https://www.linkedin.com/in/sebastián-emilio-aguiñada-coto-497a3527b"
+        target="_blank"
         >Sebastián Aguiñada</a
       >
       | Challenge by
@@ -49,5 +87,7 @@
         >devChallenges.io</a
       >.
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

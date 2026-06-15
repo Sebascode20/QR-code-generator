@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate and download QR codes quickly and for free. Create custom QR codes for URLs. Share your codes instantly from any device."
+    />
+    <meta
+      name="keywords"
+      content="QR code generator, create QR code, free QR code, generate QR code online, download QR code, custom QR code, QR code for URL, QR code reader, QR code generator, share QR code"
+    />
 
     <link
       rel="icon"
@@ -11,7 +19,7 @@
       sizes="96x96"
     />
 
-    <title>QR code generator | devChallenges.io</title>
+    <title>QR code generator</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
   </head>
@@ -31,10 +39,11 @@
         </picture>
         <form class="form-qr">
           <input
-            type="text"
+            type="url"
             name="url"
             id="url"
             placeholder="Enter an url"
+            title="It must include http:// or https:// followed by the address"
             required
           />
           <button type="submit">QR code</button>
@@ -55,7 +64,7 @@
         <div id="qrcode"></div>
         <div class="links">
           <div class="btn download">
-            <a href="#" download>Download</a>
+            <a id="link-download" href="#" download>Download</a>
             <img
               src="./resources/Load_circle_duotone.svg"
               width="24"
@@ -64,7 +73,7 @@
             />
           </div>
           <div class="btn share">
-            <a href="#">Share</a>
+            <a id="link-share" href="#">Share</a>
             <img
               src="./resources/link_alt.svg"
               width="24"
